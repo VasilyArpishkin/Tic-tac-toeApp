@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.View;
@@ -18,6 +19,8 @@ public class CrestikiNoliki extends AppCompatActivity {
     private TextView computer=findViewById(R.id.computer);
     private int c1=0, c2=0;
     private String krestik, nol;
+    private int colorRed= Color.rgb(255,46,35);
+    private int colorGreen = Color.rgb(83,225,14);
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
@@ -98,7 +101,7 @@ public class CrestikiNoliki extends AppCompatActivity {
         if(button1.getText()=="") {
             button1.setText(krestik);
             isWinnerYou();
-            isPossibility();
+            isPlayerNearWin();
             isWinnerEnemy();
             isFull();
         }
@@ -107,7 +110,7 @@ public class CrestikiNoliki extends AppCompatActivity {
         if(button2.getText()=="") {
             button2.setText(krestik);
             isWinnerYou();
-            isPossibility();
+            isPlayerNearWin();
             isWinnerEnemy();
             isFull();
         }
@@ -116,7 +119,7 @@ public class CrestikiNoliki extends AppCompatActivity {
         if(button3.getText()=="") {
             button3.setText(krestik);
             isWinnerYou();
-            isPossibility();
+            isPlayerNearWin();
             isWinnerEnemy();
             isFull();
         }
@@ -125,7 +128,7 @@ public class CrestikiNoliki extends AppCompatActivity {
         if(button4.getText()=="") {
             button4.setText(krestik);
             isWinnerYou();
-            isPossibility();
+            isPlayerNearWin();
             isWinnerEnemy();
             isFull();
         }
@@ -134,7 +137,7 @@ public class CrestikiNoliki extends AppCompatActivity {
         if(button5.getText()=="") {
             button5.setText(krestik);
             isWinnerYou();
-            isPossibility();
+            isPlayerNearWin();
             isWinnerEnemy();
             isFull();
         }
@@ -143,7 +146,7 @@ public class CrestikiNoliki extends AppCompatActivity {
         if(button6.getText()=="") {
             button6.setText(krestik);
             isWinnerYou();
-            isPossibility();
+            isPlayerNearWin();
             isWinnerEnemy();
             isFull();
         }
@@ -152,7 +155,7 @@ public class CrestikiNoliki extends AppCompatActivity {
         if(button7.getText()=="") {
             button7.setText(krestik);
             isWinnerYou();
-            isPossibility();
+            isPlayerNearWin();
             isWinnerEnemy();
             isFull();
         }
@@ -161,7 +164,7 @@ public class CrestikiNoliki extends AppCompatActivity {
         if(button8.getText()=="") {
             button8.setText(krestik);
             isWinnerYou();
-            isPossibility();
+            isPlayerNearWin();
             isWinnerEnemy();
             isFull();
         }
@@ -170,60 +173,124 @@ public class CrestikiNoliki extends AppCompatActivity {
         if(button9.getText()=="") {
             button9.setText(krestik);
             isWinnerYou();
-            isPossibility();
+            isPlayerNearWin();
             isWinnerEnemy();
             isFull();
         }
     }
     public void isWinnerYou(){
-        if(button1.getText()==krestik && button2.getText()==krestik && button3.getText()==krestik){textview.setText("Вы победили!");
+        if(button1.getText()==krestik && button2.getText()==krestik && button3.getText()==krestik){
+            button1.setBackgroundColor(colorGreen);
+            button2.setBackgroundColor(colorGreen);
+            button3.setBackgroundColor(colorGreen);
+            textview.setText("Вы победили!");
             restartWinnerYou();
         }
-        else if(button4.getText()==krestik && button5.getText()==krestik && button6.getText()==krestik){textview.setText("Вы победили!");
+        else if(button4.getText()==krestik && button5.getText()==krestik && button6.getText()==krestik){
+            button4.setBackgroundColor(colorGreen);
+            button5.setBackgroundColor(colorGreen);
+            button6.setBackgroundColor(colorGreen);
+            textview.setText("Вы победили!");
             restartWinnerYou();
         }
-        else if(button7.getText()==krestik && button8.getText()==krestik && button9.getText()==krestik){textview.setText("Вы победили!");
+        else if(button7.getText()==krestik && button8.getText()==krestik && button9.getText()==krestik){
+            button7.setBackgroundColor(colorGreen);
+            button8.setBackgroundColor(colorGreen);
+            button9.setBackgroundColor(colorGreen);
+            textview.setText("Вы победили!");
             restartWinnerYou();
         }
-        else if(button1.getText()==krestik && button4.getText()==krestik && button7.getText()==krestik){textview.setText("Вы победили!");
+        else if(button1.getText()==krestik && button4.getText()==krestik && button7.getText()==krestik){
+            button1.setBackgroundColor(colorGreen);
+            button4.setBackgroundColor(colorGreen);
+            button7.setBackgroundColor(colorGreen);
+            textview.setText("Вы победили!");
             restartWinnerYou();
         }
-        else if(button2.getText()==krestik && button5.getText()==krestik && button8.getText()==krestik){textview.setText("Вы победили!");
+        else if(button2.getText()==krestik && button5.getText()==krestik && button8.getText()==krestik){
+            button2.setBackgroundColor(colorGreen);
+            button5.setBackgroundColor(colorGreen);
+            button8.setBackgroundColor(colorGreen);
+            textview.setText("Вы победили!");
             restartWinnerYou();
         }
-        else if(button3.getText()==krestik && button6.getText()==krestik && button9.getText()==krestik){textview.setText("Вы победили!");
+        else if(button3.getText()==krestik && button6.getText()==krestik && button9.getText()==krestik){
+            button3.setBackgroundColor(colorGreen);
+            button6.setBackgroundColor(colorGreen);
+            button9.setBackgroundColor(colorGreen);
+            textview.setText("Вы победили!");
             restartWinnerYou();
         }
-        else if(button1.getText()==krestik && button5.getText()==krestik && button9.getText()==krestik){textview.setText("Вы победили!");
+        else if(button1.getText()==krestik && button5.getText()==krestik && button9.getText()==krestik){
+            button1.setBackgroundColor(colorGreen);
+            button5.setBackgroundColor(colorGreen);
+            button9.setBackgroundColor(colorGreen);
+            textview.setText("Вы победили!");
             restartWinnerYou();
         }
-        else if(button3.getText()==krestik && button5.getText()==krestik && button7.getText()==krestik){textview.setText("Вы победили!");
+        else if(button3.getText()==krestik && button5.getText()==krestik && button7.getText()==krestik){
+            button3.setBackgroundColor(colorGreen);
+            button5.setBackgroundColor(colorGreen);
+            button7.setBackgroundColor(colorGreen);
+            textview.setText("Вы победили!");
             restartWinnerYou();
         }
     }
     public void isWinnerEnemy(){
-        if(button1.getText()==nol && button2.getText()==nol && button3.getText()==nol){textview.setText("Вы проиграли!");
+        if(button1.getText()==nol && button2.getText()==nol && button3.getText()==nol){
+            button1.setBackgroundColor(colorRed);
+            button2.setBackgroundColor(colorRed);
+            button3.setBackgroundColor(colorRed);
+            textview.setText("Вы проиграли!");
             restartWinnerComputer();
         }
-        else if(button4.getText()==nol && button5.getText()==nol && button6.getText()==nol){textview.setText("Вы проиграли!");
+        else if(button4.getText()==nol && button5.getText()==nol && button6.getText()==nol){
+            button4.setBackgroundColor(colorRed);
+            button5.setBackgroundColor(colorRed);
+            button6.setBackgroundColor(colorRed);
+            textview.setText("Вы проиграли!");
             restartWinnerComputer();
         }
-        else if(button7.getText()==nol && button8.getText()==nol && button9.getText()==nol){textview.setText("Вы проиграли!");
+        else if(button7.getText()==nol && button8.getText()==nol && button9.getText()==nol){
+            button7.setBackgroundColor(colorRed);
+            button8.setBackgroundColor(colorRed);
+            button9.setBackgroundColor(colorRed);
+            textview.setText("Вы проиграли!");
             restartWinnerComputer();
         }
-        else if(button1.getText()==nol && button4.getText()==nol && button7.getText()==nol){textview.setText("Вы проиграли!");
+        else if(button1.getText()==nol && button4.getText()==nol && button7.getText()==nol){
+            button1.setBackgroundColor(colorRed);
+            button4.setBackgroundColor(colorRed);
+            button7.setBackgroundColor(colorRed);
+            textview.setText("Вы проиграли!");
             restartWinnerComputer();
         }
-        else if(button2.getText()==nol && button5.getText()==nol && button8.getText()==nol){textview.setText("Вы проиграли!");
+        else if(button2.getText()==nol && button5.getText()==nol && button8.getText()==nol){
+            button2.setBackgroundColor(colorRed);
+            button5.setBackgroundColor(colorRed);
+            button8.setBackgroundColor(colorRed);
+            textview.setText("Вы проиграли!");
             restartWinnerComputer();
         }
-        else if(button3.getText()==nol && button6.getText()==nol && button9.getText()==nol){textview.setText("Вы проиграли!");
+        else if(button3.getText()==nol && button6.getText()==nol && button9.getText()==nol){
+            button3.setBackgroundColor(colorRed);
+            button6.setBackgroundColor(colorRed);
+            button9.setBackgroundColor(colorRed);
+            textview.setText("Вы проиграли!");
             restartWinnerComputer();
         }
-        else if(button1.getText()==nol && button5.getText()==nol && button9.getText()==nol){textview.setText("Вы проиграли!");
+        else if(button1.getText()==nol && button5.getText()==nol && button9.getText()==nol){
+            button1.setBackgroundColor(colorRed);
+            button5.setBackgroundColor(colorRed);
+            button9.setBackgroundColor(colorRed);
+            textview.setText("Вы проиграли!");
             restartWinnerComputer();
         }
-        else if(button3.getText()==nol && button5.getText()==nol && button7.getText()==nol){textview.setText("Вы проиграли!");
+        else if(button3.getText()==nol && button5.getText()==nol && button7.getText()==nol){
+            button3.setBackgroundColor(colorRed);
+            button5.setBackgroundColor(colorRed);
+            button7.setBackgroundColor(colorRed);
+            textview.setText("Вы проиграли!");
             restartWinnerComputer();
         }
     }
@@ -265,19 +332,7 @@ public class CrestikiNoliki extends AppCompatActivity {
         button8.setText("");
         button9.setText("");
     }
-    public void isPossibility(){
-        int k=0;
-        if(button1.getText()!="")k++;
-        if(button2.getText()!="")k++;
-        if(button3.getText()!="")k++;
-        if(button4.getText()!="")k++;
-        if(button5.getText()!="")k++;
-        if(button6.getText()!="")k++;
-        if(button7.getText()!="")k++;
-        if(button8.getText()!="")k++;
-        if(button9.getText()!="")k++;
-        if(k<8)clickPC();
-    }
+
     public void restartWinnerComputer(){
         c2++;
         String k=Integer.toString(c2), p;
@@ -304,51 +359,45 @@ public class CrestikiNoliki extends AppCompatActivity {
         button8.setText("");
         button9.setText("");
     }
-//    public void isPlayerNearWin(){
-//        if(button1.getText()==krestik && button2.getText()==krestik && button3.getText()=="")button3.setText(nol);
-//        else if(button4.getText()==krestik && button5.getText()==krestik && button6.getText()=="")button6.setText(nol);
-//        else if(button7.getText()==krestik && button8.getText()==krestik && button9.getText()=="")button9.setText(nol);
-//        else if(button2.getText()==krestik && button3.getText()==krestik && button1.getText()=="")button1.setText(nol);
-//        else if(button5.getText()==krestik && button6.getText()==krestik && button4.getText()=="")button4.setText(nol);
-//        else if(button8.getText()==krestik && button9.getText()==krestik && button7.getText()=="")button7.setText(nol);
-//        else if(button1.getText()==krestik && button3.getText()==krestik && button2.getText()=="")button2.setText(nol);
-//        else if(button4.getText()==krestik && button6.getText()==krestik && button5.getText()=="")button5.setText(nol);
-//        else if(button7.getText()==krestik && button9.getText()==krestik && button8.getText()=="")button8.setText(nol);
-//        else if(button1.getText()==krestik && button7.getText()==krestik && button4.getText()=="")button4.setText(nol);
-//        else if(button2.getText()==krestik && button8.getText()==krestik && button5.getText()=="")button5.setText(nol);
-//        else if(button3.getText()==krestik && button9.getText()==krestik && button6.getText()=="")button6.setText(nol);
-//        else if(button1.getText()==krestik && button4.getText()==krestik && button7.getText()=="")button7.setText(nol);
-//        else if(button2.getText()==krestik && button5.getText()==krestik && button8.getText()=="")button8.setText(nol);
-//        else if(button3.getText()==krestik && button6.getText()==krestik && button9.getText()=="")button9.setText(nol);
-//        else if(button4.getText()==krestik && button7.getText()==krestik && button1.getText()=="")button1.setText(nol);
-//        else if(button5.getText()==krestik && button8.getText()==krestik && button2.getText()=="")button2.setText(nol);
-//        else if(button6.getText()==krestik && button9.getText()==krestik && button3.getText()=="")button3.setText(nol);//для игры с компьютером повышенной сложностью
-//        else if(button1.getText()==krestik && button5.getText()==krestik && button9.getText()=="")button9.setText(nol);
-//        else if(button5.getText()==krestik && button9.getText()==krestik && button1.getText()=="")button1.setText(nol);
-//        else if(button1.getText()==krestik && button9.getText()==krestik && button5.getText()=="")button5.setText(nol);
-//        else if(button7.getText()==krestik && button5.getText()==krestik && button3.getText()=="")button3.setText(nol);
-//        else if(button5.getText()==krestik && button3.getText()==krestik && button7.getText()=="")button7.setText(nol);
-//        else if(button7.getText()==krestik && button3.getText()==krestik && button5.getText()=="")button5.setText(nol);
-//    }
-//    public void isPossibility2(){
-//        int k=0;
-//        if(button1.getText()!="")k++;
-//        if(button2.getText()!="")k++;
-//        if(button3.getText()!="")k++;
-//        if(button4.getText()!="")k++;//для игры с компьютером повышенной сложностью
-//        if(button5.getText()!="")k++;
-//        if(button6.getText()!="")k++;
-//        if(button7.getText()!="")k++;
-//        if(button8.getText()!="")k++;
-//        if(button9.getText()!="")k++;
-//        if(k==1 && button5.getText()=="")button5.setText(nol);
-//        else if(k<8 && k==2){
-//            int randomnumber = (int) (Math.random()*9+1);
-//         switch (){
-//
-//         }
-//        }
-//    }
+
+    public void isPlayerNearWin(){
+        int k=0;
+        if(button1.getText()!="")k++;
+        if(button2.getText()!="")k++;
+        if(button3.getText()!="")k++;
+        if(button4.getText()!="")k++;
+        if(button5.getText()!="")k++;
+        if(button6.getText()!="")k++;
+        if(button7.getText()!="")k++;
+        if(button8.getText()!="")k++;
+        if(button9.getText()!="")k++;
+        if(k==8 && button5.getText()=="")button5.setText(nol);
+        else if(button1.getText()==krestik && button2.getText()==krestik && button3.getText()=="")button3.setText(nol);
+        else if(button4.getText()==krestik && button5.getText()==krestik && button6.getText()=="")button6.setText(nol);
+        else if(button7.getText()==krestik && button8.getText()==krestik && button9.getText()=="")button9.setText(nol);
+        else if(button2.getText()==krestik && button3.getText()==krestik && button1.getText()=="")button1.setText(nol);
+        else if(button5.getText()==krestik && button6.getText()==krestik && button4.getText()=="")button4.setText(nol);
+        else if(button8.getText()==krestik && button9.getText()==krestik && button7.getText()=="")button7.setText(nol);
+        else if(button1.getText()==krestik && button3.getText()==krestik && button2.getText()=="")button2.setText(nol);
+        else if(button4.getText()==krestik && button6.getText()==krestik && button5.getText()=="")button5.setText(nol);
+        else if(button7.getText()==krestik && button9.getText()==krestik && button8.getText()=="")button8.setText(nol);
+        else if(button1.getText()==krestik && button7.getText()==krestik && button4.getText()=="")button4.setText(nol);
+        else if(button2.getText()==krestik && button8.getText()==krestik && button5.getText()=="")button5.setText(nol);
+        else if(button3.getText()==krestik && button9.getText()==krestik && button6.getText()=="")button6.setText(nol);
+        else if(button1.getText()==krestik && button4.getText()==krestik && button7.getText()=="")button7.setText(nol);
+        else if(button2.getText()==krestik && button5.getText()==krestik && button8.getText()=="")button8.setText(nol);
+        else if(button3.getText()==krestik && button6.getText()==krestik && button9.getText()=="")button9.setText(nol);
+        else if(button4.getText()==krestik && button7.getText()==krestik && button1.getText()=="")button1.setText(nol);
+        else if(button5.getText()==krestik && button8.getText()==krestik && button2.getText()=="")button2.setText(nol);
+        else if(button6.getText()==krestik && button9.getText()==krestik && button3.getText()=="")button3.setText(nol);
+        else if(button1.getText()==krestik && button5.getText()==krestik && button9.getText()=="")button9.setText(nol);
+        else if(button5.getText()==krestik && button9.getText()==krestik && button1.getText()=="")button1.setText(nol);
+        else if(button1.getText()==krestik && button9.getText()==krestik && button5.getText()=="")button5.setText(nol);
+        else if(button7.getText()==krestik && button5.getText()==krestik && button3.getText()=="")button3.setText(nol);
+        else if(button5.getText()==krestik && button3.getText()==krestik && button7.getText()=="")button7.setText(nol);
+        else if(button7.getText()==krestik && button3.getText()==krestik && button5.getText()=="")button5.setText(nol);
+        else if(k!=0)clickPC();
+    }
     public void isFull(){
         int k=0;
         if(button1.getText()!="")k++;
@@ -360,7 +409,9 @@ public class CrestikiNoliki extends AppCompatActivity {
         if(button7.getText()!="")k++;
         if(button8.getText()!="")k++;
         if(button9.getText()!="")k++;
-        textview.setText("Ничья!");
-        if(k==9)restartNobody();
+        if(k==9){
+            textview.setText("Ничья!");
+            restartNobody();
+        }
     }
 }

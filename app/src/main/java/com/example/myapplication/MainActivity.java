@@ -22,18 +22,24 @@ import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
     Scanner in = new Scanner(System.in);
-    private Button BT;
+    private Button BT1, BT2;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
         setContentView(R.layout.activity_main);
-        BT = findViewById(R.id.ChangeActivity);
-        BT.setOnClickListener(new View.OnClickListener() {
+        BT1 = findViewById(R.id.ChangeActivityComputer);
+        BT1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CrestikiNoliki.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+        BT2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
     }
